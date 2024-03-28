@@ -1,0 +1,168 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.table {
+    margin-top: 8rem;
+
+    .table__title {
+        .title {
+            max-width: 63.5rem;
+        }
+    }
+
+    .table__top {
+        margin-top: $margin-regular;
+
+        .top-element {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.6rem 0 1.6rem 0;
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+            border-top: 0.1rem solid $clr-border;
+
+            &:hover {
+                transform: translateX(1rem);
+                -webkit-transform: translateX(1rem);
+                -moz-transform: translateX(1rem);
+                -ms-transform: translateX(1rem);
+                -o-transform: translateX(1rem);
+            }
+
+            &:active h3 {
+                color: $clr-red;
+            }
+
+            h2 {
+                color: $clr-primary-black;
+                font-size: $font-size-ss;
+                font-weight: 500;
+                line-height: 1.4rem;
+            }
+
+            h3 {
+                color: $clr-primary-dark-blue;
+                font-size: $font-size-l;
+                font-weight: 600;
+                line-height: 2.16rem;
+                transition: $transition-fast;
+                max-width: 38.4rem;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+            }
+
+            .two {
+                margin-left: 2rem;
+            }
+
+            .three {
+                margin-right: 19rem;
+            }
+
+            p {
+                color: $clr-primary-dark-blue;
+                font-size: $font-size-s;
+                font-weight: 500;
+                line-height: 1.82rem;
+
+                max-width: 35.1rem;
+
+                opacity: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        .table__top {
+            display: none;
+        }
+
+        .table-top-laptop {
+            display: block;
+
+            margin-top: 2.4rem;
+
+            .top-element {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.6rem 0 1.6rem 0;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+                border-top: 0.1rem solid $clr-border;
+
+                &:hover {
+                    transform: translateX(1rem);
+                    -webkit-transform: translateX(1rem);
+                    -moz-transform: translateX(1rem);
+                    -ms-transform: translateX(1rem);
+                    -o-transform: translateX(1rem);
+                }
+
+                &:active h3 {
+                    color: $clr-red;
+                }
+
+                h2 {
+                    color: $clr-primary-black;
+                    font-size: $font-size-ss;
+                    font-weight: 500;
+                    line-height: 1.4rem;
+                }
+
+                h3 {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-l;
+                    font-weight: 600;
+                    line-height: 2.16rem;
+                    transition: $transition-fast;
+                    max-width: 38.4rem;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                }
+
+                p {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-s;
+                    font-weight: 500;
+                    line-height: 1.82rem;
+    
+                    max-width: 35.1rem;
+    
+                    opacity: 70%;
+                }
+                .two {
+                    margin-left: 32rem;
+                }
+                .three {
+                    margin-left: 32.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .table {
+        .table-top-laptop {
+            .top-element {
+                display: flex;
+                justify-content: baseline;
+                .three,
+                .two {
+                    margin-left: $margin-xxsmall;
+                }
+            }
+        }
+    }
+}

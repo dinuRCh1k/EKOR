@@ -1,0 +1,81 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.contact {
+    margin-top: 8rem;
+
+    .contact__top {
+        margin-top: $margin-regular;
+
+        .top-element {
+            display: flex;
+            justify-content: space-between;
+            border-top: 0.1rem solid $clr-border;
+            padding-top: 1.6rem;
+            margin-bottom: 1.6rem;
+
+            h2 {
+                color: $clr-primary-dark-blue;
+                font-size: $font-size-l;
+                font-weight: 600;
+                line-height: 2.16rem;
+            }
+
+            .element-right {
+                @include flex-column();
+                row-gap: 0.6rem;
+
+                h3 {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-s;
+                    font-weight: 500;
+                    line-height: 1.82rem;
+
+                    max-width: 26.4rem;
+                }
+
+                p {
+                    color: $clr-primary-gray;
+                    font-size: $font-size-s;
+                    font-weight: 500;
+                    line-height: 1.82rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        .contact__top {
+            .top-element {
+                img {
+                    width: 21.5rem;
+                    height: 12rem;
+                }
+
+                h2 {
+                    font-size: $font-size-m;
+                    line-height: 1.92rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .contact {
+        .title-flex {
+            h2 {
+                display: none;
+            }
+        }
+        .contact__top {
+            margin-top: $margin-xsmall;
+            .top-element {
+                flex-direction: column;
+                row-gap: 0.6rem;
+            }
+        }
+    }
+}

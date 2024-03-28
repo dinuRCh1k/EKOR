@@ -1,0 +1,229 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.reputation {
+    margin-top: 14.8rem;
+
+    .reputation__title {
+        .title {
+            max-width: 63.5rem;
+        }
+    }
+
+    .reputation__grid {
+        margin-top: $margin-regular;
+
+        .reputation__top {
+            display: grid;
+            grid-template-columns: 55rem 26.5rem 26.5rem;
+            grid-gap: 2rem;
+        }
+
+        .reputation__center {
+            display: grid;
+            grid-template-columns: repeat(2, 55rem);
+            grid-gap: 2rem;
+            margin-top: $margin-xsmall;
+        }
+
+        .reputation__end {
+            display: grid;
+            grid-template-columns: 26.5rem 26.5rem 55rem;
+            grid-gap: 2rem;
+
+            margin-top: $margin-xsmall;
+        }
+
+        .reputation__card {
+            padding: $padding-xsmall;
+            background: $clr-white;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+            height: 23.5rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &:hover {
+                transform: translateY(-1rem);
+                -webkit-transform: translateY(-1rem);
+                -moz-transform: translateY(-1rem);
+                -ms-transform: translateY(-1rem);
+                -o-transform: translateY(-1rem);
+                box-shadow: $shadow;
+            }
+
+            &:active h2 {
+                color: $clr-red;
+            }
+
+            h2 {
+                color: $clr-primary-dark-blue;
+                font-size: $font-size-ss;
+                font-weight: 500;
+                line-height: 1.4rem;
+                opacity: 30%;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+            }
+
+            h3 {
+                margin-top: 0.8rem;
+
+                color: $clr-primary-dark-blue;
+                font-size: $font-size-x;
+                font-weight: 600;
+                line-height: 2.88rem;
+
+                max-width: 32.1rem;
+            }
+
+            p {
+                color: $clr-primary-gray;
+                font-size: $font-size-s;
+                font-weight: 500;
+                line-height: 1.82rem;
+
+                max-width: 33.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reputation {
+        .reputation__title {
+            h2 {
+                text-wrap: nowrap;
+            }
+        }
+        .reputation__grid {
+            .reputation__top {
+                .reputation__card {
+                    display: none;
+                }
+                .top-mobile {
+                    display: grid;
+                    grid-template-columns: repeat(2, 33.2rem);
+                    grid-gap: 2rem;
+                    .reputation__card {
+                        display: block;
+                    }
+                    .first {
+                        height: 29.2rem;
+                    }
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 2rem;
+                        .reputation__card {
+                            height: 13.6rem;
+                        }
+                    }
+                }
+            }
+            .reputation__center {
+                grid-template-columns: repeat(2,33.2rem);
+                grid-gap: 2rem;
+            }
+            .reputation__card {
+                h3 {
+                    font-size: $font-size-l;
+                    line-height: 2.16rem;
+                }
+            }
+            .reputation__end {
+                .end-mobile {
+                    display: grid;
+                    grid-template-columns: repeat(2, 33.2rem);
+                    grid-gap: 2rem;
+                    .left {
+                        @include flex-column();
+                        row-gap: 2rem;
+                        .reputation__card {
+                            height: 13.6rem;
+                        }
+                    }
+                    .reputation__card {
+                        display: block;
+                    }
+                    .last {
+                        height: 29.2rem;
+                    }
+                }
+                .reputation__card {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .reputation {
+        margin-top: $margin-regular;
+        .reputation__title {
+            .title {
+                max-width: 29rem;
+            }
+        }
+        .reputation__grid {
+            .reputation__card {
+                height: 15.8rem;
+                padding: 1.6rem;
+                p {
+                    margin-top: $margin-xxsmall;
+                }
+            }
+            .reputation__top {
+                .top-mobile {
+                    display: none;
+                }
+                .top-mobile-2 {
+                    display: grid;
+                    grid-template-columns: 29rem;
+                    grid-gap: 2rem;
+                    width: 29rem;
+                    .reputation__card {
+                        display: block;
+                    }
+                    .bottom {
+                        display: grid;
+                        grid-template-columns: repeat(2, 14rem);
+                        grid-gap: 2rem;
+                    }
+                }
+            }
+            .reputation__center {
+                @include flex-column();
+                row-gap: 2rem;
+            }
+            .reputation__end {
+                display: none;
+            }
+
+            .btn {
+                display: block;
+                width: 29rem;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: $margin-xxsmall;
+                text-align: center;
+
+                color: $clr-primary-dark-blue;
+                background: $clr-background-2;
+            }
+        }
+    }
+}

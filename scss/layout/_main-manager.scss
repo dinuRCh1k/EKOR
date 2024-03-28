@@ -1,0 +1,191 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.manager {
+    margin-top: 8rem;
+
+    .manager__content {
+        height: 42.4rem;
+        background: $clr-white;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+        padding: $padding-regular;
+
+        .manager__wrapper {
+            @include flex-row-center();
+            column-gap: 2.5rem;
+
+            .manager__left {
+                .manager__title {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-xxl;
+                    font-weight: 600;
+                    line-height: 4rem;
+
+                    max-width: 35.2rem;
+                }
+
+                p {
+                    margin-top: $margin-xsmall;
+
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-s;
+                    font-weight: 500;
+                    line-height: 1.82rem;
+                }
+
+                .btn {
+                    margin-top: 12.4rem;
+                }
+            }
+
+            .manager__right {
+                display: grid;
+                grid-template-columns: repeat(4, 12.8rem);
+                grid-gap: 3rem;
+
+                .manager__card {
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    &:hover {
+                        transform: translateY(-1rem);
+                        -webkit-transform: translateY(-1rem);
+                        -moz-transform: translateY(-1rem);
+                        -ms-transform: translateY(-1rem);
+                        -o-transform: translateY(-1rem);
+                    }
+
+                    h3 {
+                        margin-top: $margin-xxsmall;
+
+                        color: $clr-primary-dark-blue;
+                        font-size: $font-size-m;
+                        font-weight: 600;
+                        line-height: 1.92rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .manager {
+        .manager__content {
+            padding: $padding-small $padding-small 3.4rem $padding-small;
+
+            .manager__wrapper {
+                column-gap: 1.9rem;
+
+                .manager__left {
+                    .manager__title {
+                        font-size: 3rem;
+                        line-height: 3.3rem;
+                    }
+
+                    p {
+                        margin-top: $margin-xxsmall;
+                    }
+
+                    .btn {
+                        margin-top: 10.8rem;
+                        width: 23.5rem;
+                        text-wrap: nowrap;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .manager__right {
+                    grid-template-columns: repeat(3, 8.7rem);
+                    grid-gap: 2rem;
+
+                    .manager__card {
+                        h3 {
+                            font-size: $font-size-s;
+
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .manager {
+        margin-top: $margin-regular;
+
+        .manager__content {
+            padding: 1.5rem;
+            height: auto;
+
+            .manager__wrapper {
+                flex-direction: column;
+
+                .manager__left {
+                    .btn {
+                        display: none;
+                    }
+                }
+
+                .manager__right {
+                    .manager__card {
+                        display: none;
+                    }
+
+                    .manager__mobile {
+                        margin-top: $margin-xsmall;
+                        position: relative;
+                        display: block;
+
+                        .manager__card {
+                            display: block;
+                            width: 12.8rem;
+                            margin-left: 7.4rem;
+                        }
+
+                        .left,
+                        .right {
+                            position: absolute;
+                            transition: $transition-fast;
+                            -webkit-transition: $transition-fast;
+                            -moz-transition: $transition-fast;
+                            -ms-transition: $transition-fast;
+                            -o-transition: $transition-fast;
+                            &:hover,
+                            &:active {
+                                color: $clr-primary-yellow;
+                            }
+                        }
+
+                        .left {
+                            font-size: $font-size-x;
+                            color: $clr-primary-dark-blue;
+                            cursor: pointer;
+                            left: 1.5rem;
+                            top: 6.2rem;
+                        }
+
+                        .right {
+                            font-size: $font-size-x;
+                            color: $clr-primary-dark-blue;
+                            cursor: pointer;
+                            left: 24.7rem;
+                            top: 6.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

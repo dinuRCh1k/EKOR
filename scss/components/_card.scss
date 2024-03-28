@@ -1,0 +1,20 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.card {
+    h2 {
+        color: $clr-primary-dark-blue;
+        font-size: $font-size-l;
+        font-weight: 600;
+        line-height: 2.1rem;
+
+        margin-top: 1.6rem;
+    }
+    h3 {
+        color: $clr-primary-dark-blue;
+        font-size: $font-size-s;
+        font-weight: 500;
+        line-height: 1.68rem;
+
+        margin-top: 0.8rem;
+    }
+}

@@ -1,0 +1,155 @@
+$clr-white: #FFF;
+$clr-black: #000;
+$clr-red: #F10B34;
+
+$clr-primary-gray: #70798E;
+$clr-primary-dark-blue: #203686;
+$clr-primary-light-blue: #1877F2;
+$clr-primary-yellow: #FFED32;
+$clr-primary-green: #4ADD47;
+$clr-primary-dark-green: #6BA252;
+$clr-primary-black: #202329;
+
+$clr-background: #DDE1E6;
+$clr-background-2: #F4F7FB;
+$clr-background-3: #EBEDF0;
+
+$clr-border: #20368633;
+
+$font-size-xxxl: 5rem;
+$font-size-xxl: 4rem;
+$font-size-xl: 3.2rem;
+$font-size-x: 2.4rem;
+$font-size-l: 1.8rem;
+$font-size-m: 1.6rem;
+$font-size-s: 1.4rem;
+$font-size-ss: 1.2rem;
+
+$margin-xxsmall: 1rem;
+$margin-xsmall: 2rem;
+$margin-small: 3rem;
+$margin-regular: 4rem;
+$margin-medium: 5rem;
+$margin-xmedium: 6rem;
+$margin-xxmedium: 7rem;
+$margin-large: 10rem;
+
+$padding-xxsmall: 1rem;
+$padding-xsmall: 2rem;
+$padding-small: 3rem;
+$padding-regular: 4rem;
+$padding-medium: 5rem;
+$padding-large: 10rem;
+
+$transition-fast: 0.3s ease-out;
+$transition-medium: 0.5s ease-out;
+$transition-long: 0.8s ease-out;
+
+$radius-small: 0.4rem;
+$radius-regular: 0.6rem;
+$radius-large: 0.8rem;
+
+$shadow: -0.1rem -0.1rem .5rem 0 rgba(0, 0, 0, 0.75);
+
+$first-family: "Montserrat",
+sans-serif;
+$second-family: "Saira Stencil One",
+sans-serif;
+
+$container-width: 1120px;
+
+@keyframes opac {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+//Container
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to('phone') {
+        max-width: 33rem !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 30rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 68.4rem;
+    }
+}
+
+//HTML,BODY
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $first-family;
+    background: $clr-background-3;
+    overflow-x: hidden;
+}
+
+//none
+.none {
+    display: none;
+}
+
+//title
+.title {
+    color: $clr-primary-dark-blue;
+    font-size: $font-size-xxl;
+    font-weight: 600;
+    line-height: 4rem;
+
+    @include respond-to('phone') {
+        font-size: $font-size-x !important;
+        line-height: 2.64rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
+}
+
+//title-flex
+.title-flex {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 14.1rem;
+
+    h2 {
+        color: $clr-primary-gray;
+        font-size: $font-size-s;
+        font-weight: 500;
+        line-height: 1.82rem;
+
+        width: 14.7rem;
+    }
+
+    @include respond-to('phone') {
+        flex-direction: column;
+        row-gap: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-flex {
+        column-gap: 10.8rem;
+    }
+}

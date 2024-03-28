@@ -1,0 +1,260 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+
+.bot {
+    margin-top: 8rem;
+
+    .bot__content {
+        background: $clr-primary-gray url('../img/bg/Group\ 1.png');
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+        height: 54rem;
+
+        padding: $padding-regular;
+
+        position: relative;
+
+        .bot__title {
+            color: $clr-background-2;
+            font-size: 6rem;
+            font-weight: 600;
+            line-height: 5.4rem;
+
+            max-width: 60.3rem;
+        }
+
+        p {
+            margin-top: $margin-xsmall;
+
+            color: $clr-background-2;
+            font-size: $font-size-l;
+            font-weight: 600;
+            line-height: 2.16rem;
+
+            max-width: 32.2rem;
+        }
+
+        .bot__buttons {
+            @include flex-row-center();
+            column-gap: 1rem;
+
+            margin-top: $margin-large;
+
+            .btn-whatsapp {
+                padding: 1.8rem 2.4rem;
+                @include flex-row-center();
+                column-gap: 0.8rem;
+                color: $clr-white;
+                font-size: $font-size-m;
+                line-height: 2.4rem;
+                background: $clr-primary-green;
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &:hover {
+                    background: $clr-primary-dark-blue;
+                    color: $clr-white;
+                }
+
+                i {
+                    font-size: 2rem;
+                }
+            }
+
+            .btn-telegram {
+                padding: 1.8rem 2.55rem;
+
+                @include flex-row-center();
+                column-gap: 0.8rem;
+
+                color: $clr-white;
+                font-size: $font-size-m;
+                font-weight: 600;
+                line-height: 2.4rem;
+
+                background: linear-gradient(180deg, #2AABEE 0%, #229ED9 99.26%);
+
+
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &:hover {
+                    background: $clr-primary-dark-blue;
+                }
+
+                i {
+                    font-size: 2.4rem;
+                }
+            }
+
+            .btn-vk {
+                padding: 1.8rem 1.9rem;
+
+                @include flex-row-center();
+                column-gap: 0.8rem;
+
+                background: $clr-primary-light-blue;
+                border-radius: 1rem;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                color: $clr-white;
+                font-size: $font-size-m;
+                font-weight: 600;
+                line-height: 2.4rem;
+
+                &:hover {
+                    background: $clr-primary-dark-blue;
+                }
+
+                i {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+        .bot__top {
+            display: flex;
+            align-items: flex-start;
+            column-gap: 1.1rem;
+
+            margin-top: $margin-xsmall;
+
+            label {
+                max-width: 35.3rem;
+
+                color: $clr-background-2;
+                font-size: $font-size-ss;
+                font-weight: 500;
+                line-height: 1.6rem;
+            }
+        }
+
+        .bot__phone {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bot {
+        .bot__content {
+            height: auto;
+
+            padding: $padding-small;
+
+            .bot__title {
+                font-size: 3rem;
+                line-height: 3.3rem;
+                max-width: 40.8rem;
+            }
+
+            p {
+                margin-top: $margin-xxsmall;
+
+                font-size: $font-size-s;
+                line-height: 1.82rem;
+
+                max-width: 28rem;
+            }
+
+            .bot__buttons {
+                margin-top: 6.4rem;
+
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 1rem;
+
+                margin-right: 36rem;
+            }
+
+            .bot__phone {
+                width: 31.4rem;
+                height: 40.2rem;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .bot {
+        .bot__content {
+            padding: 1.5rem;
+
+            .bot__title {
+                font-size: 2.4rem;
+                line-height: 2.64rem;
+                max-width: 21rem;
+            }
+
+            p {
+                max-width: 20.9rem;
+            }
+
+            .bot__phone {
+                width: 14rem;
+                height: 19.9rem;
+                bottom: 4rem;
+            }
+
+            .bot__buttons {
+                margin-top: 5.4rem;
+                .btn-whatsapp,
+                .btn-telegram,
+                .btn-vk {
+                    display: none;
+                }
+
+                .buttons-mobile {
+                    @include flex-row-center();
+                    column-gap: 1rem;
+
+                    .btn-whatsapp,
+                    .btn-telegram,
+                    .btn-vk {
+                        display: flex;
+                        justify-content: center;
+                        padding: 0.8rem;
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+
+            .bot__top {
+                label {
+                    max-width: 20.1rem;
+                }
+            }
+        }
+    }
+}

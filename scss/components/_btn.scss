@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+    padding: 1.65rem 8.3rem;
+    background: $clr-primary-yellow;
+    color: $clr-primary-dark-blue;
+    font-size: $font-size-s;
+    font-weight: 600;
+    line-height: 1.54rem;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    &:hover {
+        color: $clr-white;
+        background: $clr-primary-dark-blue;
+    }
+    @include respond-to('phone') {
+        padding: 1.15rem 1.4rem;
+    }
+}

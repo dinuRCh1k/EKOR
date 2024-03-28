@@ -1,0 +1,105 @@
+@import '../scss-utils/variables';
+@import '../scss-utils/mixin';
+.delivery {
+    margin-top: 8rem;
+    .deli__title {
+        .title-right {
+            .text {
+                margin-top: $margin-xsmall;
+                margin-bottom: $margin-regular;
+
+                @include flex-row-center();
+                column-gap: 1rem;
+                p {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-s;
+                    font-weight: 500;
+                    line-height: 2rem;
+
+                    max-width: 34rem;
+                }
+            }
+
+            .title-top {
+                margin-top: $margin-xsmall;
+
+                display: flex;
+                align-items: flex-start;
+                column-gap: 10.4rem;
+
+                margin-bottom: $margin-regular;
+                h4 {
+                    color: $clr-primary-dark-blue;
+                    font-size: $font-size-l;
+                    font-weight: 600;
+                    line-height: 2.16rem;
+                    &:first-child,
+                    &:nth-child(2) {
+                        width: 24rem;
+                    }
+
+                    &:last-child {
+                        width: 22.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .delivery {
+        .deli__title {
+            .title-right {
+                .text {
+                    margin-top: $margin-xxsmall;
+                    margin-bottom: 2.2rem;
+                    p {
+                        max-width: 25.9rem;
+                    }
+                }
+                .title-top {
+                    margin-top: $margin-xsmall;
+                    margin-bottom: $margin-xsmall;
+                    column-gap: 0;
+                    h4 {
+                        font-size: $font-size-s;
+                        line-height: 1.68rem;
+                        max-width: 17.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .delivery {
+        .deli__title {
+            .title-right {
+                .text {
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    width: 26rem;
+                }
+                .title-top {
+                    display: none;
+                }
+                .line {
+                    display: none;
+                }
+                .title-top-mobile {
+                    @include flex-row-center();
+                    column-gap: 1rem;
+                    .title-top {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1.6rem;
+                        h4 {
+                            max-width: 24.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
